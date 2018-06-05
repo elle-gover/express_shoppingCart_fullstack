@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--my stylesheet-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+    
+    <title>Express Lab Pt1</title>
+</head>
+<body>
+    
+  <!-- <nav>
+    <a href="#!/cartItems" class="shopping-cart">Your Shopping Cart</a>
+  </nav> -->
+
+  <ng-view></ng-view>
+
+
+    <!--link scripts here-->
+    <script src="https://code.angularjs.org/1.6.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.5/angular-route.min.js"></script>
+    <script src="js/module/module.js"></script>
+    <script src="js/components/cart-items.js"></script>
+    <script src="js/config/config.js"></script>
+    <script src="js/services/cart-service.js"></script>
+</body>
+</html>
