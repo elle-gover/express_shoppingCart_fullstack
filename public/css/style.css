@@ -1,34 +1,39 @@
 * {
-   
+    box-sizing: border-box;
 }
-
 body {
     background-color: rgba(215, 210, 204, 0.618);
+    background-image: url("will-suddreth-349366.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 1200px;
 }
 
 .shopping-cart-title {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 20px auto;
     font-family: 'Noto Sans', sans-serif;
     color: #4f9bb5;
     font-size: 24px;
     border: 0.5px solid #71b0c6;
     width: 30%;
+    padding: 5px;
     text-shadow: 0 1px black;
     background-color: white;
     border-radius: 5px;
-    padding: 5px;
     box-shadow: 0 1px 5px grey;
 }
 
 .shopping-list {
-    background-color: white;
+    background-color: #999393;
+    
     border: 1px solid#71b0c6;
     border-radius: 5px;
-    width: 30%;
+    width: 50%;
     margin-top: 10px;
+    margin-left: 10px;
     box-shadow: 0 1px 5px grey;
 }
 
@@ -36,7 +41,9 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 10px 10px;
+    /* opacity: 0.3; */
+    margin: 10px 30px;
+    padding: 50px;
 }
 
 .item-title {
@@ -46,18 +53,25 @@ body {
     font-weight: 400;
 }
 
-p {
+.byline {
     font-family: 'Inconsolata', monospace;
-    padding: 0;
-    margin-left: 10px;
+    font-size: 22px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
 }
 
 .delete {
+    font-family: 'Inconsolata', monospace;
+    font-size: 10px;
     border: 1px solid purple;
     border-radius: 5px;
     text-decoration: none;
     padding: 5px;
     background: plum;
+    
+    margin-left: 450px;
     cursor: pointer;
 }
 
@@ -68,12 +82,14 @@ p {
 }
 
 .form {
-    background-color: white;
+    background-color: #CEBFC4;
     border: 1px solid#71b0c6;
     border-radius: 5px;
-    width: 30%;
-    margin-top: 10px;
+    /* width: 30%; */
     box-shadow: 0 1px 5px grey;
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .add-title {
@@ -88,7 +104,7 @@ p {
 input {
     display: flex;
     flex-direction: column;
-    margin: 2px 10px;
+    margin: 10px 10px;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #71b0c6;
@@ -96,8 +112,10 @@ input {
 
 button {
     font-family: 'Inconsolata', monospace;
+    font-size: 14px;
     padding: 4px;
     width: 35%;
+    height: 20%;
     border-radius: 4px;
     background-color: #88E188;
     margin-left: 12px;
@@ -106,6 +124,18 @@ button {
 }
 
 button:hover {
-    background-color: grey;
+    background-color: #D1C2C7;
     color: black;
+}
+
+.continue {
+    padding-top: 0;
+    margin-left: 950px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 14px;
+    padding: 5px;
+    width: 15%; 
+    border-radius: 10px;
+    background-color: #D7CBCF;
+    cursor: pointer;
 }

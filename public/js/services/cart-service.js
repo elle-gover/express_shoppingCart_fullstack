@@ -27,10 +27,19 @@ function CartService($http) {
         });
       };
 
+    const updateItem = (item) => {
+      return $http({
+        method: "PUT",
+        url: "/portal/cart-items/" + item.id,
+        data: item
+      });
+    };
+
     return {
         getAllItems,
         deleteItem,
-        addItem
+        addItem,
+        updateItem
     };
 
 }

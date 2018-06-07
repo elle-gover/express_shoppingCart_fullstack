@@ -2,13 +2,17 @@
 
 const cartItems = {
     template: `
+    <header>
+        <button class="continue">Continue Shopping on PrepShop</button>
+    </header>
     <h1 class="shopping-cart-title">Your Shopping Cart</h1>
+    <h5 class="byline">Where Preppers Go To Shop</h5>
     <section class="shopping-notes">
     
     <section ng-repeat="item in $ctrl.cartItems" class="shopping-list">
-        <p class="item-title"> {{ item.product }}</p>
-        <p> Price: {{ item.price }}</p>
-        <p> Quantity: {{item.quantity}}<p>
+        <input ng-blur="$ctrl.updateItem(item);" ng-model="item.product" placeholder="Update Product" class="item-title">
+        <input ng-blur="$ctrl.updateItem(item);" ng-model="item.price" placeholder="Update Item Price" class="p">
+        <input ng-blur="$ctrl.updateItem(item);" ng-model="item.quantity" placeholder="Update Item Quantity" class="p">
         <a href="" ng-click="$ctrl.deleteItem(item.id);" class="delete">Delete</a>
     </section>
    
@@ -18,11 +22,9 @@ const cartItems = {
         <input type="text" placeholder="Price" ng-model="$ctrl.newItem.price">
         <input type="text" placeholder="Quantity" ng-model="$ctrl.newItem.quantity">
         <button>Add to List!</button>
-        </form>
+    </form>
+
     </section>
-    
-  
-    
     `,
     controller: ["CartService", function(CartService) {
         const vm = this;
